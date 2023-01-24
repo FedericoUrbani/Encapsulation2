@@ -17,8 +17,13 @@ public class Main {
         double height=(Double.parseDouble(reader.readLine()));
         System.out.println("insert person age:");
         int age= Integer.parseInt(reader.readLine());
-        Person person= new Person(name,surname,height,age);
+        Person person= new Person();
+        person.setAge(age);
+        person.setName(name);
+        person.setSurname(surname);
+        person.setHeight(height);
 
-        System.out.println(person.toString());
+        String personPrint = String.format("%s\n%s : %s\n%s : %s\n%s : %.2f\n%s : %d"," Person details : "," The name is: ",person.getName()," The surname is: ",person.getSurname()," The height is: ", person.getHeight()," The age is: ",person.getAge()) ;
+        System.out.println(personPrint);
     }
 }
